@@ -10,10 +10,14 @@ import Faq from "@/components/Faq";
 import DiagnosticForm from "@/components/DiagnosticForm";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import Preloader from "@/components/Preloader";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-japi-warm text-japi-charcoal flex flex-col relative selection:bg-japi-forest selection:text-white">
+      {/* Architectural Cinematic Preloader */}
+      <Preloader />
+
       {/* Top sticky navbar */}
       <Navbar />
 

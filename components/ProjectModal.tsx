@@ -1,7 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
-import { X, MapPin, Maximize2, Calendar, Check, ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faXmark,
+  faLocationDot,
+  faCheck,
+  faArrowRight,
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 import { Project } from "@/data/projects";
 
 interface ProjectModalProps {
@@ -35,7 +43,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               {project.condo}
             </span>
             <div className="flex items-center gap-1.5 text-xs text-japi-muted">
-              <MapPin className="w-3.5 h-3.5 text-japi-wood" />
+              <FontAwesomeIcon icon={faLocationDot} className="w-3.5 h-3.5 text-japi-wood" />
               <span>{project.location}</span>
             </div>
           </div>
@@ -44,7 +52,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             className="p-2 rounded-full hover:bg-japi-sand text-japi-charcoal transition-colors"
             aria-label="Fechar modal"
           >
-            <X className="w-5 h-5" />
+            <FontAwesomeIcon icon={faXmark} className="w-5 h-5" />
           </button>
         </div>
 
@@ -65,15 +73,15 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 <>
                   <button
                     onClick={prevImage}
-                    className="absolute left-3 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-black/40 text-white hover:bg-black/70 backdrop-blur-sm transition-colors"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 text-white hover:bg-black/70 backdrop-blur-sm transition-colors flex items-center justify-center"
                   >
-                    <ChevronLeft className="w-5 h-5" />
+                    <FontAwesomeIcon icon={faChevronLeft} className="w-4 h-4" />
                   </button>
                   <button
                     onClick={nextImage}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 p-2.5 rounded-full bg-black/40 text-white hover:bg-black/70 backdrop-blur-sm transition-colors"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 text-white hover:bg-black/70 backdrop-blur-sm transition-colors flex items-center justify-center"
                   >
-                    <ChevronRight className="w-5 h-5" />
+                    <FontAwesomeIcon icon={faChevronRight} className="w-4 h-4" />
                   </button>
                 </>
               )}
@@ -150,7 +158,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               <ul className="space-y-2">
                 {project.features.map((feat, idx) => (
                   <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-japi-charcoal">
-                    <Check className="w-4 h-4 text-japi-forest flex-shrink-0 mt-0.5" />
+                    <FontAwesomeIcon icon={faCheck} className="w-3.5 h-3.5 text-japi-forest flex-shrink-0 mt-0.5" />
                     <span>{feat}</span>
                   </li>
                 ))}
@@ -169,7 +177,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-japi-forest text-white px-6 py-3 rounded-xl text-sm font-medium hover:bg-japi-forest-light transition-colors"
             >
               <span>Solicitar Diagnóstico para Terreno Similar</span>
-              <ArrowRight className="w-4 h-4" />
+              <FontAwesomeIcon icon={faArrowRight} className="w-3.5 h-3.5" />
             </a>
           </div>
 

@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { Star, Quote, Award } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar, faQuoteLeft } from "@fortawesome/free-solid-svg-icons";
 
 export default function Testimonials() {
   const reviews = [
@@ -58,11 +59,11 @@ export default function Testimonials() {
               <div>
                 <div className="flex items-center gap-1 text-amber-500 mb-6">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
+                    <FontAwesomeIcon key={i} icon={faStar} className="w-3.5 h-3.5 text-amber-400" />
                   ))}
                 </div>
 
-                <Quote className="w-8 h-8 text-japi-wood/30 mb-3" />
+                <FontAwesomeIcon icon={faQuoteLeft} className="w-6 h-6 text-japi-wood/30 mb-3" />
                 <p className="font-serif italic text-sm sm:text-base text-japi-charcoal/90 leading-relaxed mb-6">
                   "{rev.text}"
                 </p>

@@ -2,7 +2,12 @@
 
 import React, { useState } from "react";
 import { FAQS } from "@/data/faq";
-import { ChevronDown, HelpCircle, MessageSquare } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronDown,
+  faCircleQuestion,
+  faCommentDots,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -18,7 +23,7 @@ export default function Faq() {
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-japi-sand border border-japi-border text-japi-forest text-xs font-semibold uppercase tracking-wider mb-2">
-            <HelpCircle className="w-3.5 h-3.5" />
+            <FontAwesomeIcon icon={faCircleQuestion} className="w-3.5 h-3.5" />
             <span>Esclarecimento Técnico</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-japi-charcoal leading-tight">
@@ -50,8 +55,9 @@ export default function Faq() {
                       {faq.question}
                     </span>
                   </div>
-                  <ChevronDown
-                    className={`w-5 h-5 text-japi-forest transition-transform duration-300 flex-shrink-0 ${
+                  <FontAwesomeIcon
+                    icon={faChevronDown}
+                    className={`w-4 h-4 text-japi-forest transition-transform duration-300 flex-shrink-0 ${
                       isOpen ? "rotate-180" : ""
                     }`}
                   />
@@ -71,7 +77,7 @@ export default function Faq() {
         <div className="mt-12 p-6 rounded-2xl bg-japi-sand border border-japi-border text-center flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3 text-left">
             <div className="w-10 h-10 rounded-full bg-japi-forest text-white flex items-center justify-center flex-shrink-0">
-              <MessageSquare className="w-5 h-5" />
+              <FontAwesomeIcon icon={faCommentDots} className="w-5 h-5" />
             </div>
             <div>
               <p className="text-sm font-semibold text-japi-charcoal">Ficou com alguma dúvida específica sobre o seu lote?</p>

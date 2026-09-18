@@ -1,7 +1,12 @@
 "use client";
 
 import React, { useState, useRef, useCallback } from "react";
-import { Sparkles, CheckCircle, ShieldAlert, ArrowLeftRight } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faWandMagicSparkles,
+  faCircleCheck,
+  faLeftRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function BeforeAfter() {
   const [sliderPosition, setSliderPosition] = useState(50); // percentage 0 to 100
@@ -40,7 +45,7 @@ export default function BeforeAfter() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-japi-warm border border-japi-border text-japi-wood text-xs font-semibold tracking-wider uppercase mb-3">
-            <Sparkles className="w-3.5 h-3.5" />
+            <FontAwesomeIcon icon={faWandMagicSparkles} className="w-3.5 h-3.5" />
             <span>Fidelidade Construtiva Milimétrica</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-japi-charcoal leading-tight">
@@ -108,7 +113,7 @@ export default function BeforeAfter() {
             >
               {/* Center Circular Handle */}
               <div className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-white text-japi-charcoal shadow-2xl flex items-center justify-center border-2 border-japi-forest cursor-grab active:cursor-grabbing">
-                <ArrowLeftRight className="w-5 h-5 text-japi-forest" />
+                <FontAwesomeIcon icon={faLeftRight} className="w-4 h-4 text-japi-forest" />
               </div>
             </div>
 
@@ -122,7 +127,7 @@ export default function BeforeAfter() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
             <div className="flex items-start gap-3.5 p-5 rounded-xl bg-white border border-japi-border">
               <div className="w-9 h-9 rounded-lg bg-emerald-50 text-japi-forest flex items-center justify-center flex-shrink-0">
-                <CheckCircle className="w-5 h-5" />
+                <FontAwesomeIcon icon={faCircleCheck} className="w-4 h-4" />
               </div>
               <div>
                 <h4 className="text-sm font-semibold text-japi-charcoal">Zero Conflitos de Fachada</h4>
@@ -134,7 +139,7 @@ export default function BeforeAfter() {
 
             <div className="flex items-start gap-3.5 p-5 rounded-xl bg-white border border-japi-border">
               <div className="w-9 h-9 rounded-lg bg-amber-50 text-japi-wood flex items-center justify-center flex-shrink-0">
-                <CheckCircle className="w-5 h-5" />
+                <FontAwesomeIcon icon={faCircleCheck} className="w-4 h-4" />
               </div>
               <div>
                 <h4 className="text-sm font-semibold text-japi-charcoal">Paginação Precisa de Pedras</h4>
@@ -146,7 +151,7 @@ export default function BeforeAfter() {
 
             <div className="flex items-start gap-3.5 p-5 rounded-xl bg-white border border-japi-border">
               <div className="w-9 h-9 rounded-lg bg-blue-50 text-japi-forest flex items-center justify-center flex-shrink-0">
-                <CheckCircle className="w-5 h-5" />
+                <FontAwesomeIcon icon={faCircleCheck} className="w-4 h-4" />
               </div>
               <div>
                 <h4 className="text-sm font-semibold text-japi-charcoal">Auditoria Periódica de Obra</h4>

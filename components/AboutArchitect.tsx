@@ -1,24 +1,32 @@
 "use client";
 
 import React from "react";
-import { Sun, Layers, Cpu, CheckCircle2, Compass, Quote } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faSun,
+  faLayerGroup,
+  faMicrochip,
+  faCircleCheck,
+  faCompass,
+  faQuoteLeft,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function AboutArchitect() {
   const pillars = [
     {
-      icon: Sun,
+      icon: faSun,
       title: "Bioclimatismo & Topografia Autoral",
       description:
         "Cada projeto nasce do estudo dos ventos canalizados pela Serra do Japi e da rota solar anual. Desenhamos beirais calculados para captar o sol agradável do inverno e bloquear o calor do poente, reduzindo o consumo de climatização em até 40%.",
     },
     {
-      icon: Layers,
+      icon: faLayerGroup,
       title: "Verdade dos Materiais & Texturas Nobres",
       description:
         "Rejeitamos revestimentos sintéticos e tendências efêmeras. Trabalhamos com a sobriedade do concreto ripado, pedras naturais regionais (como moledo e granito escovado) e madeiras nobres que ganham ainda mais beleza com o passar dos anos.",
     },
     {
-      icon: Cpu,
+      icon: faMicrochip,
       title: "Tecnologia BIM & Orçamento Blindado",
       description:
         "Modelamos a edificação milimetricamente antes do primeiro tijolo ser assentado. A compatibilização tridimensional entre estrutura, elétrica, hidráulica e climatização elimina 98% dos conflitos e desperdícios no canteiro.",
@@ -55,7 +63,7 @@ export default function AboutArchitect() {
 
               {/* Float Card Quote */}
               <div className="absolute -bottom-6 -right-4 sm:-bottom-8 sm:-right-6 max-w-xs bg-japi-charcoal text-white p-5 rounded-2xl shadow-elevated border border-white/10">
-                <Quote className="w-6 h-6 text-japi-wood mb-2 opacity-80" />
+                <FontAwesomeIcon icon={faQuoteLeft} className="w-5 h-5 text-japi-wood mb-2 opacity-80" />
                 <p className="font-serif text-sm italic leading-relaxed text-gray-200">
                   "Um projeto só é verdadeiramente bem-sucedido quando a família acorda e sente a paz de estar no melhor lugar do mundo."
                 </p>
@@ -70,7 +78,7 @@ export default function AboutArchitect() {
           {/* Story & Philosophy */}
           <div className="lg:col-span-7 lg:pl-6 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-japi-forest/10 text-japi-forest text-xs font-medium">
-              <Compass className="w-3.5 h-3.5" />
+              <FontAwesomeIcon icon={faCompass} className="w-3.5 h-3.5" />
               <span>ARQ. JULIANA PRADO • FUNDADORA & DIRETORA CRIATIVA</span>
             </div>
 
@@ -95,7 +103,7 @@ export default function AboutArchitect() {
                 "Compatibilização multidisciplinar em plataforma BIM",
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center gap-2.5 text-xs text-japi-charcoal font-medium">
-                  <CheckCircle2 className="w-4 h-4 text-japi-forest flex-shrink-0" />
+                  <FontAwesomeIcon icon={faCircleCheck} className="w-4 h-4 text-japi-forest flex-shrink-0" />
                   <span>{item}</span>
                 </div>
               ))}
@@ -116,7 +124,7 @@ export default function AboutArchitect() {
               >
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-japi-sand flex items-center justify-center text-japi-forest mb-6">
-                    <Icon className="w-6 h-6 stroke-[1.7]" />
+                    <FontAwesomeIcon icon={Icon} className="w-5 h-5" />
                   </div>
                   <h4 className="font-serif text-xl font-medium text-japi-charcoal mb-3">
                     {pillar.title}

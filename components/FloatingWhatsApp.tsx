@@ -1,7 +1,9 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { MessageCircle, X } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 export default function FloatingWhatsApp() {
   const [showTooltip, setShowTooltip] = useState(false);
@@ -33,7 +35,7 @@ export default function FloatingWhatsApp() {
             }}
             className="absolute top-2 right-2 text-japi-muted hover:text-japi-charcoal p-1"
           >
-            <X className="w-3.5 h-3.5" />
+            <FontAwesomeIcon icon={faXmark} className="w-3.5 h-3.5" />
           </button>
           <div className="flex items-center gap-2 mb-1.5">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
@@ -53,7 +55,7 @@ export default function FloatingWhatsApp() {
         aria-label="Falar no WhatsApp"
         className="w-14 h-14 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white shadow-elevated flex items-center justify-center transition-transform hover:scale-110 active:scale-95 group relative"
       >
-        <MessageCircle className="w-7 h-7" />
+        <FontAwesomeIcon icon={faWhatsapp} className="w-7 h-7 text-3xl" />
         <span className="absolute -top-1 -right-1 w-4 h-4 bg-japi-wood rounded-full border-2 border-white flex items-center justify-center text-[9px] font-bold text-white">
           1
         </span>

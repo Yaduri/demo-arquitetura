@@ -1,7 +1,15 @@
 "use client";
 
 import React, { useState } from "react";
-import { Compass, Box, Layers, FileCheck, HardHat, ChevronRight } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCompass,
+  faCube,
+  faLayerGroup,
+  faFileCircleCheck,
+  faHelmetSafety,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Methodology() {
   const [activeStep, setActiveStep] = useState(0);
@@ -9,7 +17,7 @@ export default function Methodology() {
   const steps = [
     {
       number: "01",
-      icon: Compass,
+      icon: faCompass,
       title: "Diagnóstico Topoclimático do Lote",
       subtitle: "Leitura minuciosa da geografia e dos ventos",
       description:
@@ -18,7 +26,7 @@ export default function Methodology() {
     },
     {
       number: "02",
-      icon: Box,
+      icon: faCube,
       title: "Concepção Autoral & Maquete 3D",
       subtitle: "Vivencie sua futura casa antes da obra",
       description:
@@ -27,7 +35,7 @@ export default function Methodology() {
     },
     {
       number: "03",
-      icon: Layers,
+      icon: faLayerGroup,
       title: "Projeto Executivo & BIM Integrado",
       subtitle: "Precisão milimétrica que blinda seu orçamento",
       description:
@@ -36,7 +44,7 @@ export default function Methodology() {
     },
     {
       number: "04",
-      icon: FileCheck,
+      icon: faFileCircleCheck,
       title: "Aprovações no Condomínio & Prefeitura",
       subtitle: "Burocracia zero para o cliente",
       description:
@@ -45,7 +53,7 @@ export default function Methodology() {
     },
     {
       number: "05",
-      icon: HardHat,
+      icon: faHelmetSafety,
       title: "Assessoria Técnica no Canteiro de Obras",
       subtitle: "A garantia de que o projeto será executado à risca",
       description:
@@ -90,7 +98,7 @@ export default function Methodology() {
                   <span className={`text-xs font-bold font-serif ${isActive ? "text-emerald-300" : "text-japi-wood"}`}>
                     Etapa {s.number}
                   </span>
-                  <Icon className="w-4 h-4 opacity-75" />
+                  <FontAwesomeIcon icon={Icon} className="w-3.5 h-3.5 opacity-75" />
                 </div>
                 <p className={`text-xs font-semibold line-clamp-1 ${isActive ? "text-white" : "text-japi-charcoal"}`}>
                   {s.title}
@@ -148,7 +156,7 @@ export default function Methodology() {
                   className="w-full inline-flex items-center justify-center gap-2 bg-white hover:bg-japi-warm border border-japi-border text-japi-forest py-2.5 rounded-lg text-xs font-semibold transition-colors"
                 >
                   <span>Próxima Etapa</span>
-                  <ChevronRight className="w-4 h-4" />
+                  <FontAwesomeIcon icon={faChevronRight} className="w-3 h-3" />
                 </button>
               </div>
             </div>

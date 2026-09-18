@@ -2,7 +2,8 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Compass, ArrowRight } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCompass, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 interface PreloaderProps {
   onComplete?: () => void;
@@ -96,7 +97,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
               className="flex items-center gap-3"
             >
               <div className="w-8 h-8 rounded-sm bg-[#264234] flex items-center justify-center text-white border border-white/10">
-                <Compass className="w-4 h-4 text-emerald-300" />
+                <FontAwesomeIcon icon={faCompass} className="w-4 h-4 text-emerald-300" />
               </div>
               <div className="flex flex-col">
                 <span className="font-serif text-lg tracking-wider text-white font-medium">
@@ -117,7 +118,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
               className="group flex items-center gap-1.5 text-xs text-gray-400 hover:text-white px-3 py-1.5 rounded-full border border-white/10 hover:border-white/30 transition-all bg-white/5"
             >
               <span>Pular</span>
-              <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+              <FontAwesomeIcon icon={faArrowRight} className="w-3 h-3 transition-transform group-hover:translate-x-0.5" />
             </motion.button>
           </div>
 
@@ -138,7 +139,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute inset-2 rounded-full border border-[#B56636]/60"
               />
-              <Compass className="w-8 h-8 text-emerald-400" />
+              <FontAwesomeIcon icon={faCompass} className="w-7 h-7 text-emerald-400" />
             </div>
 
             {/* Massive Serif Counter */}

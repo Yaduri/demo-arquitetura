@@ -1,7 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import { Send, CheckCircle2, ShieldCheck, MapPin, Calendar, Compass, Phone } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPaperPlane,
+  faCircleCheck,
+  faShieldHalved,
+  faCompass,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function DiagnosticForm() {
   const [formData, setFormData] = useState({
@@ -50,7 +56,7 @@ export default function DiagnosticForm() {
           {/* Left Column: Value Proposition */}
           <div className="lg:col-span-5 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
-              <Compass className="w-3.5 h-3.5" />
+              <FontAwesomeIcon icon={faCompass} className="w-3.5 h-3.5" />
               <span>Atendimento Exclusivo sob Agendamento</span>
             </div>
 
@@ -65,7 +71,7 @@ export default function DiagnosticForm() {
             <div className="space-y-4 pt-2">
               <div className="flex items-start gap-3">
                 <div className="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <CheckCircle2 className="w-4 h-4" />
+                  <FontAwesomeIcon icon={faCircleCheck} className="w-3.5 h-3.5" />
                 </div>
                 <div>
                   <h4 className="text-sm font-medium text-white">Análise de Insolação e Topografia Real</h4>
@@ -77,7 +83,7 @@ export default function DiagnosticForm() {
 
               <div className="flex items-start gap-3">
                 <div className="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <CheckCircle2 className="w-4 h-4" />
+                  <FontAwesomeIcon icon={faCircleCheck} className="w-3.5 h-3.5" />
                 </div>
                 <div>
                   <h4 className="text-sm font-medium text-white">Zoneamento e Diretrizes do Condomínio</h4>
@@ -89,7 +95,7 @@ export default function DiagnosticForm() {
 
               <div className="flex items-start gap-3">
                 <div className="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <CheckCircle2 className="w-4 h-4" />
+                  <FontAwesomeIcon icon={faCircleCheck} className="w-3.5 h-3.5" />
                 </div>
                 <div>
                   <h4 className="text-sm font-medium text-white">Estimativa de Investimento e Cronograma</h4>
@@ -101,7 +107,7 @@ export default function DiagnosticForm() {
             </div>
 
             <div className="p-4 rounded-xl bg-white/5 border border-white/10 flex items-center gap-3 text-xs text-gray-300">
-              <ShieldCheck className="w-5 h-5 text-japi-wood flex-shrink-0" />
+              <FontAwesomeIcon icon={faShieldHalved} className="w-4 h-4 text-japi-wood flex-shrink-0" />
               <span>Atendemos um número restrito de projetos simultâneos para garantir acompanhamento autoral e exclusivo.</span>
             </div>
           </div>
@@ -113,7 +119,7 @@ export default function DiagnosticForm() {
               {submitted ? (
                 <div className="text-center py-12 space-y-4">
                   <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center">
-                    <CheckCircle2 className="w-10 h-10" />
+                    <FontAwesomeIcon icon={faCircleCheck} className="w-10 h-10" />
                   </div>
                   <h3 className="font-serif text-2xl sm:text-3xl text-white font-light">
                     Diagnóstico Encaminhado com Sucesso!
@@ -127,7 +133,7 @@ export default function DiagnosticForm() {
                       className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white px-8 py-3.5 rounded-xl text-sm font-medium transition-colors"
                     >
                       <span>Abrir WhatsApp VIP Agora</span>
-                      <Send className="w-4 h-4" />
+                      <FontAwesomeIcon icon={faPaperPlane} className="w-3.5 h-3.5" />
                     </button>
                   </div>
                 </div>
@@ -263,7 +269,7 @@ export default function DiagnosticForm() {
                     className="w-full inline-flex items-center justify-center gap-2.5 bg-japi-forest hover:bg-japi-forest-light text-white py-4 rounded-xl text-sm font-semibold transition-all shadow-card hover:shadow-elevated"
                   >
                     <span>Solicitar Agendamento de Diagnóstico</span>
-                    <Send className="w-4 h-4" />
+                    <FontAwesomeIcon icon={faPaperPlane} className="w-3.5 h-3.5" />
                   </button>
 
                   <p className="text-[11px] text-center text-gray-400">

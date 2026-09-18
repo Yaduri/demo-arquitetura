@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Menu, X, Phone, ArrowUpRight, Compass } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars, faXmark, faPhone, faArrowUpRightFromSquare, faCompass } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,7 +43,7 @@ export default function Navbar() {
             {/* Logo */}
             <a href="#" className="flex items-center gap-2 group">
               <div className="w-9 h-9 rounded-sm bg-japi-forest flex items-center justify-center text-white transition-transform group-hover:scale-105">
-                <Compass className="w-5 h-5 text-[#FAF8F5] stroke-[1.5]" />
+                <FontAwesomeIcon icon={faCompass} className="w-5 h-5 text-[#FAF8F5]" />
               </div>
               <div className="flex flex-col">
                 <span className="font-serif text-xl sm:text-2xl tracking-tight text-japi-charcoal font-medium leading-none">
@@ -75,7 +76,7 @@ export default function Navbar() {
                 className="inline-flex items-center gap-2 bg-japi-forest text-white px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium hover:bg-japi-forest-light transition-all shadow-sm group"
               >
                 <span>Agendar Diagnóstico</span>
-                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </a>
             </div>
 
@@ -92,7 +93,7 @@ export default function Navbar() {
                 className="p-2 text-japi-charcoal hover:text-japi-forest transition-colors"
                 aria-label="Alternar menu"
               >
-                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {mobileMenuOpen ? <FontAwesomeIcon icon={faXmark} className="w-5 h-5" /> : <FontAwesomeIcon icon={faBars} className="w-5 h-5" />}
               </button>
             </div>
           </div>
@@ -106,7 +107,7 @@ export default function Navbar() {
             <div className="flex flex-col gap-6 pt-16">
               <div className="flex items-center gap-2 pb-4 border-b border-japi-border">
                 <div className="w-8 h-8 rounded-sm bg-japi-forest flex items-center justify-center text-white">
-                  <Compass className="w-4 h-4 text-white" />
+                  <FontAwesomeIcon icon={faCompass} className="w-4 h-4 text-white" />
                 </div>
                 <div>
                   <p className="font-serif text-lg font-medium text-japi-charcoal leading-tight">STUDIO JAPI</p>
@@ -139,7 +140,7 @@ export default function Navbar() {
                 className="w-full flex items-center justify-center gap-2 bg-japi-forest text-white py-3 rounded-xl text-sm font-medium hover:bg-japi-forest-light transition-all shadow-sm"
               >
                 <span>Agendar Sessão de Diagnóstico</span>
-                <ArrowUpRight className="w-4 h-4" />
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="w-3.5 h-3.5" />
               </a>
               <p className="text-center text-xs text-japi-muted">
                 Jundiaí - SP • Atendimento Exclusivo

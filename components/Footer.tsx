@@ -1,7 +1,15 @@
 "use client";
 
 import React from "react";
-import { Compass, MapPin, Mail, Phone, Instagram, Linkedin, ArrowUp } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCompass,
+  faLocationDot,
+  faEnvelope,
+  faPhone,
+  faArrowUp,
+} from "@fortawesome/free-solid-svg-icons";
+import { faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -19,7 +27,7 @@ export default function Footer() {
           <div className="lg:col-span-4 space-y-4">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-sm bg-japi-forest flex items-center justify-center text-white">
-                <Compass className="w-4 h-4 text-white" />
+                <FontAwesomeIcon icon={faCompass} className="w-4 h-4 text-white" />
               </div>
               <span className="font-serif text-2xl tracking-tight text-white font-medium">
                 STUDIO JAPI
@@ -42,7 +50,7 @@ export default function Footer() {
                 className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                 aria-label="Instagram"
               >
-                <Instagram className="w-4 h-4" />
+                <FontAwesomeIcon icon={faInstagram} className="w-4 h-4" />
               </a>
               <a
                 href="https://linkedin.com"
@@ -51,7 +59,7 @@ export default function Footer() {
                 className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 hover:text-white hover:bg-white/10 transition-colors"
                 aria-label="LinkedIn"
               >
-                <Linkedin className="w-4 h-4" />
+                <FontAwesomeIcon icon={faLinkedinIn} className="w-4 h-4" />
               </a>
             </div>
           </div>
@@ -96,19 +104,19 @@ export default function Footer() {
             
             <div className="space-y-2.5 text-xs text-gray-400">
               <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-japi-wood flex-shrink-0 mt-0.5" />
+                <FontAwesomeIcon icon={faLocationDot} className="w-4 h-4 text-japi-wood flex-shrink-0 mt-0.5" />
                 <span>
                   Av. Nove de Julho, 3500 • Edifício Nine Office Prime • Jundiaí - SP
                 </span>
               </div>
 
               <div className="flex items-center gap-2">
-                <Phone className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+                <FontAwesomeIcon icon={faPhone} className="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" />
                 <span>(11) 99999-8888 (WhatsApp VIP)</span>
               </div>
 
               <div className="flex items-center gap-2">
-                <Mail className="w-4 h-4 text-japi-wood flex-shrink-0" />
+                <FontAwesomeIcon icon={faEnvelope} className="w-3.5 h-3.5 text-japi-wood flex-shrink-0" />
                 <span>contato@studiojapi.com.br</span>
               </div>
             </div>
@@ -133,7 +141,7 @@ export default function Footer() {
             className="flex items-center gap-1.5 text-gray-400 hover:text-white transition-colors text-xs"
           >
             <span>Voltar ao topo</span>
-            <ArrowUp className="w-3.5 h-3.5" />
+            <FontAwesomeIcon icon={faArrowUp} className="w-3 h-3" />
           </button>
         </div>
 

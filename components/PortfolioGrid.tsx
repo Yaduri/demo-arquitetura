@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import { PROJECTS, Project } from "@/data/projects";
 import ProjectModal from "./ProjectModal";
-import { ArrowUpRight, Eye, MapPin } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare, faEye } from "@fortawesome/free-solid-svg-icons";
 
 export default function PortfolioGrid() {
   const [selectedCategory, setSelectedCategory] = useState<string>("Todos");
@@ -84,7 +85,7 @@ export default function PortfolioGrid() {
 
                 <div className="absolute top-4 right-4">
                   <div className="w-8 h-8 rounded-full bg-black/40 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                    <Eye className="w-4 h-4" />
+                    <FontAwesomeIcon icon={faEye} className="w-4 h-4" />
                   </div>
                 </div>
 
@@ -120,7 +121,7 @@ export default function PortfolioGrid() {
                   </div>
 
                   <span className="inline-flex items-center gap-1 text-xs font-medium text-japi-forest group-hover:translate-x-1 transition-transform">
-                    Ver detalhes <ArrowUpRight className="w-3.5 h-3.5" />
+                    Ver detalhes <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="w-3 h-3 ml-1" />
                   </span>
                 </div>
               </div>

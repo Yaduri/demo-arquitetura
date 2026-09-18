@@ -1,7 +1,16 @@
 "use client";
 
 import React, { useState } from "react";
-import { Calculator, Check, ArrowRight, Sparkles, Clock, Coins, Shield, MessageCircle } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCalculator,
+  faCheck,
+  faArrowRight,
+  faWandMagicSparkles,
+  faClock,
+  faCoins,
+} from "@fortawesome/free-solid-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 export default function Simulator() {
   const [area, setArea] = useState(480);
@@ -55,7 +64,7 @@ export default function Simulator() {
         {/* Header */}
         <div className="max-w-3xl mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-japi-forest/10 text-japi-forest text-xs font-semibold uppercase tracking-wider mb-2">
-            <Calculator className="w-3.5 h-3.5" />
+            <FontAwesomeIcon icon={faCalculator} className="w-3.5 h-3.5" />
             <span>Ferramenta Interativa de Planejamento</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-light text-japi-charcoal leading-tight">
@@ -179,7 +188,7 @@ export default function Simulator() {
                             : "border-japi-muted/50 bg-white"
                         }`}
                       >
-                        {isChecked && <Check className="w-3 h-3 stroke-[3]" />}
+                        {isChecked && <FontAwesomeIcon icon={faCheck} className="w-2.5 h-2.5" />}
                       </div>
                       <span>{item.label}</span>
                     </div>
@@ -217,7 +226,7 @@ export default function Simulator() {
             <div className="grid grid-cols-2 gap-3 pt-2">
               <div className="p-3.5 rounded-xl bg-white/5 border border-white/10">
                 <div className="flex items-center gap-1.5 text-xs text-emerald-300">
-                  <Clock className="w-3.5 h-3.5" />
+                  <FontAwesomeIcon icon={faClock} className="w-3.5 h-3.5" />
                   <span>Concepção & Aprovação</span>
                 </div>
                 <p className="font-serif text-base text-white mt-1">{estimatedMonths}</p>
@@ -225,7 +234,7 @@ export default function Simulator() {
 
               <div className="p-3.5 rounded-xl bg-white/5 border border-white/10">
                 <div className="flex items-center gap-1.5 text-xs text-amber-300">
-                  <Coins className="w-3.5 h-3.5" />
+                  <FontAwesomeIcon icon={faCoins} className="w-3.5 h-3.5" />
                   <span>Valorização Esperada</span>
                 </div>
                 <p className="font-serif text-base text-white mt-1">+35% a +45% pós-obra</p>
@@ -235,7 +244,7 @@ export default function Simulator() {
             {/* Insight recommendation */}
             <div className="p-4 rounded-xl bg-japi-forest/40 border border-japi-forest/60 text-xs text-emerald-100 leading-relaxed">
               <div className="flex items-center gap-1.5 font-semibold text-white mb-1">
-                <Sparkles className="w-3.5 h-3.5 text-japi-wood" />
+                <FontAwesomeIcon icon={faWandMagicSparkles} className="w-3.5 h-3.5 text-japi-wood" />
                 <span>Recomendação Técnica Studio Japi</span>
               </div>
               Para {area}m² com {suites} suítes em terreno {getTerrainName().toLowerCase()}, recomendamos volumetria em balanço que minimiza muros de arrimo dispendiosos e garante que todos os quartos aproveitem a ventilação natural da serra.
@@ -249,7 +258,7 @@ export default function Simulator() {
                 rel="noopener noreferrer"
                 className="w-full inline-flex items-center justify-center gap-2.5 bg-emerald-600 hover:bg-emerald-500 text-white py-4 rounded-xl text-sm font-semibold transition-all shadow-md"
               >
-                <MessageCircle className="w-4 h-4" />
+                <FontAwesomeIcon icon={faWhatsapp} className="w-4 h-4 text-lg" />
                 <span>Enviar Simulação no WhatsApp VIP</span>
               </a>
 
@@ -258,7 +267,7 @@ export default function Simulator() {
                 className="w-full inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white py-3 rounded-xl text-xs font-medium transition-all"
               >
                 <span>Agendar Sessão Presencial no Studio Japi</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                <FontAwesomeIcon icon={faArrowRight} className="w-3.5 h-3.5" />
               </a>
             </div>
 

@@ -1,7 +1,13 @@
 "use client";
 
 import React from "react";
-import { ArrowUpRight, ChevronDown, Sparkles, ShieldCheck, MapPin, Award } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faArrowUpRightFromSquare,
+  faLocationDot,
+  faShieldHalved,
+  faAward,
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Hero() {
   return (
@@ -44,7 +50,7 @@ export default function Hero() {
                 className="inline-flex items-center justify-center gap-3 bg-japi-forest text-white px-7 py-4 rounded-xl text-sm font-medium hover:bg-japi-forest-light transition-all shadow-card hover:shadow-elevated group"
               >
                 <span>Agendar Sessão de Diagnóstico de Terreno</span>
-                <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
               </a>
 
               <a
@@ -58,11 +64,11 @@ export default function Hero() {
             {/* Trust badges */}
             <div className="pt-4 flex flex-wrap items-center gap-y-3 gap-x-6 text-xs text-japi-muted border-t border-japi-border/70 w-full">
               <div className="flex items-center gap-2">
-                <MapPin className="w-4 h-4 text-japi-wood" />
+                <FontAwesomeIcon icon={faLocationDot} className="w-3.5 h-3.5 text-japi-wood" />
                 <span>Fazenda Serrazul, Paineiras, Bosque dos Jatobás e Malota</span>
               </div>
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-japi-forest" />
+                <FontAwesomeIcon icon={faShieldHalved} className="w-3.5 h-3.5 text-japi-forest" />
                 <span>100% de aprovação em comitês de obras e prefeitura</span>
               </div>
             </div>
@@ -99,7 +105,7 @@ export default function Hero() {
               {/* Floating Architectural Badge */}
               <div className="absolute -bottom-6 -left-6 sm:-bottom-8 sm:-left-8 bg-white/95 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-card border border-japi-border hidden sm:flex items-center gap-4">
                 <div className="w-12 h-12 rounded-xl bg-japi-forest/10 flex items-center justify-center text-japi-forest">
-                  <Award className="w-6 h-6 stroke-[1.8]" />
+                  <FontAwesomeIcon icon={faAward} className="w-5 h-5" />
                 </div>
                 <div>
                   <p className="font-serif text-2xl font-light text-japi-charcoal leading-none">FAU-USP</p>
